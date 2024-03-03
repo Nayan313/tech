@@ -1,0 +1,192 @@
+.in-main-shop-1 {
+    width: min(90%, 1440px);
+    margin: 2.5vh auto;
+}
+
+.direction {
+    display: flex;
+    align-items: center;
+    margin: 90px 10px 30px 40px;
+}
+
+.direction>p {
+    font-size: 13px;
+}
+
+.categoryShop {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.categoryShop>.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.categoryShop>.categoryBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 0 0 0 30px;
+}
+.categoryShop>.categoryBox:hover{
+    transform: scale(1.1);
+}
+
+.categoryShop>.categoryBox>img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* shop start here */
+.shop-main {
+    color: var(--main);
+    display: flex;
+    text-transform: capitalize;
+    width: 100%;
+    margin: 20px 0px 30px 0px;
+}
+
+.shop-main>.filter {
+    display: flex;
+    flex-direction: column;
+    width: min(30%, 290px);
+    padding: 0 10px 0 0;
+    border-right: 1px solid #afafaf;
+}
+
+.shop-main>.filter>h3 {
+    font-size: 13px;
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #afafaf;
+}
+
+.shop-main>.filter>h3>img {
+    width: 13px;
+    height: 13px;
+    margin-left: 14px;
+}
+
+.shop-main>.filter>.inner-filter {
+    padding: 20px 0;
+    border-bottom: 1px solid #afafaf;
+}
+
+.shop-main>.filter>.inner-filter>h1 {
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+}
+
+.shop-main>.filter>.inner-filter>p {
+    font-size: 14px;
+    padding: 3px 0;
+}
+
+.shop-main>.filter>.inner-filter>p>input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.priceRange {
+    display: flex;
+    width: 100%;
+}
+
+.priceRange>input {
+    width: 20%;
+    margin: 0 4px 0 0;
+    padding: 5px;
+}
+
+.priceRange>button {
+    background-color: var(--main);
+    color: #fff;
+    padding: 8px 21px;
+}
+
+.shop-main>.shop-page {
+    padding: 0 0 0 20px;
+    width: 100%;
+}
+
+.shop-main>.shop-page>.upper-part-shop>div>label {
+    font-size: 13px;
+}
+
+.shop-main>.shop-page>.upper-part-shop {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    border-bottom: 1px solid #afafaf;
+}
+
+.shop-main>.shop-page>.upper-part-shop>#layout {
+    margin: 0 0 0 25px;
+}
+
+.shop-main>.shop-page>.upper-part-shop>#layout>button {
+    opacity: 0.6;
+    background-color: transparent;
+}
+
+.shop-main>.shop-page>.upper-part-shop>#layout>button:hover {
+    opacity: 1;
+}
+
+.shop-main>.shop-page>.shop-card-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.shop-main>.shop-page>.shop-card-section>.shop-card {
+    min-width: 298px;
+    max-width: 230px;
+    margin: 10px;
+    transition: transform 1330ms ease-in-out;
+}
+
+.shop-main>.shop-page>.shop-card-section>.shop-card>.shop-img-sec {
+    height: 330px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #E4E4E5;
+    border-radius: 10px;
+}
+
+.shop-main>.shop-page>.shop-card-section>.shop-card>.shop-img-sec:hover {
+    background-color: #66adff56;
+}
+
+.shop-main>.shop-page>.shop-card-section>.shop-card>.shop-img-sec>img {
+    width: 80%;
+    margin: 10%;
+}
+
+.shop-main>.shop-page>.shop-card-section>.shop-card>.shop-img-sec:hover>img:hover {
+    transform: scale(1.2);
+}
+
+.shop-main>.shop-page>.shop-card-section>.shop-card>h1 {
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.shop-main>.shop-page>.shop-card-section>.shop-card>p {
+    font-size: 18px;
+    font-weight: 700;
+}

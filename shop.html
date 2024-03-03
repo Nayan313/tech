@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+    <header class="header">
+
+    </header>
+    <section id="main">
+        <section class="in-main-shop-1">
+            <div class="direction">
+                <p><a href="index.html">Home ></a></p>
+                <p>Shop</p>
+            </div>
+
+            <div class="categoryShop">
+                <div class="categoryBox" id="mobile" title="Mobile">
+                    <img src="svg/shop/mobile.svg" alt="">
+                    <p>Mobile</p>
+                </div>
+                <div class="categoryBox active" id="accessories" title="Accessories">
+                    <img src="svg/shop/accessories.svg" alt="">
+                    <p>Accessories</p>
+                </div>
+                <div class="categoryBox" id="laptop" title="Laptop">
+                    <img src="svg/shop/laptop.svg" alt="">
+                    <p>Laptop</p>
+                </div>
+                <div class="categoryBox" id="tv" title="TV">
+                    <img src="svg/shop/tv.svg" alt="">
+                    <p>TV</p>
+                </div>
+                <div class="categoryBox" id="watch" title="Watch">
+                    <img src="svg/shop/watch.svg" alt="">
+                    <p>Watch</p>
+                </div>
+                <div class="categoryBox" id="sound" title="Sound">
+                    <img src="svg/shop/earbuds.svg" alt="">
+                    <p>Sound</p>
+                </div>
+                <div class="categoryBox" id="camera" title="Camera">
+                    <img src="svg/shop/camera.svg" alt="">
+                    <p>Camera</p>
+                </div>
+                <div class="categoryBox" id="tablet" title="Tablet">
+                    <img src="svg/shop/tablet.svg" alt="">
+                    <p>Tablet</p>
+                </div>
+                <div class="categoryBox" id="moniter" name="nayan" title="Moniter">
+                    <img src="svg/shop/moniter.svg" alt="">
+                    <p>Moniter</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="shop-main">
+                <div class="filter">
+                    <h3>filter <img src="svg/filter.svg" alt=""></h3>
+                    <div class="inner-filter">
+                        <h1>Brand</h1>
+                        <p><input type="checkbox" name="brand" id="">samsung</p>
+                        <p><input type="checkbox" name="brand" id="">apple</p>
+                        <p><input type="checkbox" name="brand" id="">oneplus</p>
+                        <p><input type="checkbox" name="brand" id="">nothing</p>
+                        <p><input type="checkbox" name="brand" id="">vivo</p>
+                        <p><input type="checkbox" name="brand" id="">mi</p>
+                        <p><input type="checkbox" name="brand" id="">oppo</p>
+                        <p><input type="checkbox" name="brand" id="">redmi</p>
+                        <p><input type="checkbox" name="brand" id="">iqoo</p>
+                        <p><input type="checkbox" name="brand" id="">lava</p>
+                    </div>
+                    <div class="inner-filter">
+                        <h1>price</h1>
+                        <p><input type="checkbox" name="price" id="">₹4000 - ₹9999</p>
+                        <p><input type="checkbox" name="price" id="">₹9999 - ₹19999</p>
+                        <p><input type="checkbox" name="price" id="">₹19999 - ₹29999</p>
+                        <p><input type="checkbox" name="price" id="">₹29999 - ₹49999</p>
+                        <p><input type="checkbox" name="price" id="">₹49999+</p>
+                        <div class="priceRange">
+                            <input type="number" name="min" placeholder="min" id="">-
+                            <input type="number" name="max" placeholder="max" id="">
+                            <button>Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="inner-filter">
+                        <h1>storage</h1>
+                        <p><input type="checkbox" name="storage" id="">32 GB</p>
+                        <p><input type="checkbox" name="storage" id="">64 GB</p>
+                        <p><input type="checkbox" name="storage" id="">128 GB</p>
+                        <p><input type="checkbox" name="storage" id="">256 GB</p>
+                        <p><input type="checkbox" name="storage" id="">512 GB</p>
+                        <p><input type="checkbox" name="storage" id="">1 TB</p>
+                    </div>
+                    <div class="inner-filter">
+                        <h1>ram</h1>
+                        <p><input type="checkbox" name="ram" id="">4 GB</p>
+                        <p><input type="checkbox" name="ram" id="">8 GB</p>
+                        <p><input type="checkbox" name="ram" id="">12 GB</p>
+                        <p><input type="checkbox" name="ram" id="">16 GB</p>
+                    </div>
+
+                </div>
+                <div class="shop-page">
+                    <div class="upper-part-shop">
+                        <div>
+                            <label for="sort">Sort by :</label>
+
+                            <select name="sort" id="sort">
+                                <option value="acceding">acceding</option>
+                                <option value="descending">descending</option>
+                            </select>
+                        </div>
+                        <div id="layout">
+                            <button onclick="twoRow()"><img src="svg/layout (2).svg" alt=""></button>
+                            <button onclick="threeRow()"><img src="svg/layout (4).svg" alt=""></button>
+                            <button onclick="fourRow()"><img src="svg/layout (3).svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="shop-card-section">
+                        <div class="shop-card" title="galaxy s24 ultra">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/s24ultra.png" alt="">
+                            </div>
+                            <h1>galaxy s24 ultra</h1>
+                            <p>₹1,39,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="iphone 15 pro max">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/15pro.png" alt="">
+                            </div>
+                            <h1>iphone 15 pro max</h1>
+                            <p>₹1,59,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="galaxy s24 plus">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/24plus.png" alt="">
+                            </div>
+                            <h1>galaxy s24 plus</h1>
+                            <p>₹1,00,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="galaxy fold 5">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/fold 5.png" alt="">
+                            </div>
+                            <h1>galaxy fold 5</h1>
+                            <p>₹1,69,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="galaxy flip 5">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/flip 5.png" alt="">
+                            </div>
+                            <h1>galaxy flip 5</h1>
+                            <p>₹1,00,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="galaxy s24">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/s24.png" alt="">
+                            </div>
+                            <h1>galaxy s24</h1>
+                            <p>₹89,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="pixel 8 pro">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/8pro.png" alt="">
+                            </div>
+                            <h1>pixel 8 pro</h1>
+                            <p>₹85,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="iphone 15">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/15.png" alt="">
+                            </div>
+                            <h1>iphone 15</h1>
+                            <p>₹79,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="samsung A73">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/a73.png" alt="">
+                            </div>
+                            <h1>samsung A73</h1>
+                            <p>₹39,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="iphone 12">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/iphone 12.png" alt="">
+                            </div>
+                            <h1>iphone 12</h1>
+                            <p>₹49,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="one plus 12 pro">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/one plus 12.png" alt="">
+                            </div>
+                            <h1>one plus 12 pro</h1>
+                            <p>₹79,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="samsung s24">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/s24 (2).png" alt="">
+                            </div>
+                            <h1>samsung s24</h1>
+                            <p>₹89,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="vivo 100x">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/vivo 100x.png" alt="">
+                            </div>
+                            <h1>vivo 100x</h1>
+                            <p>₹59,999</p>
+                        </div>
+                    
+                        <div class="shop-card" title="iphone 15">
+                            <div class="shop-img-sec">
+                                <img src="photo/mobile/15.png" alt="">
+                            </div>
+                            <h1>iphone 15</h1>
+                            <p>₹79,999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+
+        </footer>
+    </section>
+    <script src="js/navScript.js"></script>
+    <script src="js/shopscript.js"></script>
+</body>
+
+</html>
