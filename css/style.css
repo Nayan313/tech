@@ -38,7 +38,9 @@ a:hover{
     background-color: #1D2128;
     color: #fff;
 }
-
+::placeholder{
+    color: #fff;
+}
 body {
     font-family: popi;
     color: var(--main);
@@ -85,6 +87,16 @@ fill: cadetblue;
 
 #main {
     filter: none;
+}
+
+.direction {
+    display: flex;
+    align-items: center;
+    margin: 90px 0px 30px 0px;
+}
+
+.direction>p {
+    font-size: 13px;
 }
 .main{
     width: 100%;
@@ -487,3 +499,138 @@ fill: cadetblue;
     right: 10px;
 }
 
+/* -----------------
+++++++++++++++++++
+***************
+about css start here
+***************
+++++++++++++++++++
+----------------- */
+
+.timeline{
+    width: 100%;
+    display: flex;
+    color: var(--main);
+    justify-content: space-evenly;
+    background-color: #C1CDE2;
+}
+.timeline>.timepart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin: 100px 0;
+}
+.timeline>.timepart>.detailTitle{
+    width: min(60%,300px);
+}
+.timeline>.timepart>.detailTitle>h1{
+    font-size: 50px;
+}
+.timeline>.timepart>.timeInPart{
+    display: flex;
+    margin: 22px 0;
+    align-items: baseline;
+}
+
+.timeline>.timepart>.timeInPart>.logo-sec-time{
+    width: 31px;
+    height: 27.25px;
+    background-color: #828FA5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 0 0;
+    border-radius: 50%;
+}
+.timeline>.timepart>.timeInPart>.time-deatil{
+    font-size: 15px;
+}
+.timeline>.timepart>.timeInPart>.time-deatil>h1{
+    font-size: 19px;
+    text-transform: capitalize;
+}
+.timeline>.timepart>.timeInPart>.inactive{
+    background-color: #ffffff;
+}
+.timeline>.timepart>.timeInPart>.inactive>img{
+    opacity: 0;
+}
+.storeLocation{
+    width: 100%;
+    overflow: hidden;
+}
+.storeLocation>.main-store{
+    position: relative;
+    height: 960px;
+    display: flex;
+    justify-content: center;
+}
+.storeLocation>.main-store>.img-shadow-box{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    height: 1000px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0.5) 57%, rgba(233,108,123,0) 100%);
+}
+.storeLocation>.main-store>#mainBackStore{
+    position: absolute;
+    box-shadow: inset 100px 20px 30px #000;
+}
+.storeLocation>.main-store>.storeDetail{
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    z-index: 2;
+}
+.storeLocation>.main-store>.storeDetail>h1{
+    font-size: 76px;
+}
+.storeLocation>.main-store>.storeDetail>input{
+background-color: var(--main);
+color: #fff;
+outline: none;
+border: none;
+margin: 20px 0;
+border-radius: 6px;
+width: 250px;
+padding: 12px;
+}
+.other-location{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto 2.5%;
+    text-transform: capitalize;
+}
+.other-location>.card{
+    position: relative;
+    height: 300px;
+    width: 350px;
+    overflow: hidden;
+}
+.other-location>.ahemedabad{
+    width: 490px;
+}
+.other-location>.card>img{
+    width: 100%;
+}
+.other-location>.card>.box-img-back{
+position: absolute;
+bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0.5) 57%, rgba(233,108,123,0) 100%);
+}
+.other-location>.card>.detail-location{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    padding: 15px;
+}
+.other-location>.card>.detail-location>h1{
+    font-size: 35px;
+
+}

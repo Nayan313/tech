@@ -154,6 +154,9 @@ header>.icons>img:hover {
     margin: 0 6px;
 }
 
+footer  a{
+    color: #fff;
+}
 footer {
     background-color: var(--main);
     color: #fff;
