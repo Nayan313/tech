@@ -145,6 +145,33 @@ let nav123 = `
             </div>
         </li>
         <li class="menu-item-has-children" id="navMenu" onmousemove="myFunction(event)" onmouseout="clearColor()" >
+            Demo Page
+            <div class="sub-menu" onmousemove="myFunction(event)" onmouseout="clearColor()">
+                <div class="main-menu">
+                    <div class="main-box">
+                        <div class="box-inner">
+                        <h1>Demo Page</h1>
+                        <p><a href="index.html">Main Page</a></p>
+                        <p><a href="shop.html">Shop page</a></p>
+                        <p><a href="product.html">Product page</a></p>
+                        <p><a href="cart.html">Cart</a></p>
+                        </div>
+                        <div class="box-inner">
+                        <p><a href="payment.html">Payment</a></p>
+                        <p><a href="login.html">Log in Page</a></p>
+                        <p><a href="about.html">About us</a></p>
+                        </div>
+                        <div class="box-inner">
+                        <p><a href="help.html">Help Center</a></p>
+                        <p><a href="404.html">404 page</a></p>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="menu-item-has-children" id="navMenu" onmousemove="myFunction(event)" onmouseout="clearColor()" >
             Tv & Av
             <div class="sub-menu" onmousemove="myFunction(event)" onmouseout="clearColor()">
                 <div class="main-menu">
@@ -284,9 +311,10 @@ let nav123 = `
 </nav>
 <p id="openBtn" onclick="openBtn()">=</p>
 <div class="icons">
-    <img src="svg/search.svg" alt="">
-    <img src="svg/heart.svg" alt="">
-    <img src="svg/cart.svg" alt="">
+<a href="login.html" title="Search"><img src="svg/search.svg" alt=""></a>
+<a href="#" title="Wishlist"><img src="svg/heart.svg" alt=""></a>
+<a href="cart.html" title="Cart"><img src="svg/cart.svg" alt=""></a>
+<a href="login.html" title="Account"><img src="svg/user.svg" alt=""></a>
 </div>
 `
 header.innerHTML = nav123;

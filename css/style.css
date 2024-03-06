@@ -2,14 +2,17 @@
     font-family: font;
     src: url("../font/Gilmer\ Regular.otf");
 }
+
 @font-face {
     font-family: mone;
     src: url("../font/Montserrat.ttf");
 }
+
 @font-face {
     font-family: popi;
     src: url("../font/Poppins-Regular.ttf");
 }
+
 @font-face {
     font-family: titleFont;
     src: url("../font/Archivo-VariableFont_wdth\,wght.ttf");
@@ -24,58 +27,67 @@
     --background: #f5f5f7;
     --sec-back: #fff;
     --main: #1D2128;
-    --main2:  #afd7ff;
+    --main2: #afd7ff;
 }
 
 a {
     color: var(--main);
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: var(--main2);
 }
+
 ::selection {
     background-color: #1D2128;
     color: #fff;
 }
-::placeholder{
-    color: #fff;
-}
+
 body {
     font-family: popi;
     color: var(--main);
     scroll-behavior: smooth;
 }
-input[type=checkbox]{
+
+input[type=checkbox] {
     accent-color: #fff;
     mix-blend-mode: multiply;
 }
+
 #titleFont {
     font-family: titleFont;
     font-weight: 800;
 }
-select{
+input{
+    outline: none;
+    border: none;
+}
+select {
     border: none;
     background-color: #ffffff;
     color: #000000;
     margin-left: 7px;
 }
-option{
+
+option {
     background: rgba(221, 221, 221, 0.137);
-backdrop-filter: blur(5px);
-margin: 15px;
+    backdrop-filter: blur(5px);
+    margin: 15px;
 }
+
 button {
     cursor: pointer;
     border: none;
     outline: none;
 }
 
-svg:hover > path{
-fill: cadetblue;
+svg:hover>path {
+    fill: cadetblue;
 }
-#svg:hover{
-fill: cadetblue;
+
+#svg:hover {
+    fill: cadetblue;
 }
 
 
@@ -84,6 +96,241 @@ fill: cadetblue;
     font-size: 40px;
     padding: 15px 0;
 }
+
+#payment-loader {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 130;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+.loading {
+    width: 124px;
+    height: 124px;
+}
+
+.loading svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    stroke-dasharray: 380;
+    stroke-dashoffset: 380;
+    animation: circle_4 1.3s ease-in-out forwards;
+}
+
+.check {
+    stroke-dasharray: 45;
+    stroke-dashoffset: 45;
+    animation: check_4 0.2s 2s ease-in-out forwards;
+}
+
+@keyframes circle_4 {
+    0% {
+        stroke-dashoffset: 380;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes check_4 {
+    0% {
+        stroke-dashoffset: 45;
+    }
+
+    100% {
+        stroke-dashoffset: 90;
+    }
+}
+
+#last-great-message,
+#last2-great-message {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 500px;
+    font-size: 23px;
+    color: #ffffff00;
+}
+
+#last-great-message {
+
+    animation: nayan 4s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+#last2-great-message {
+    animation: nayan2 4s ease-in-out forwards;
+    animation-delay: 5s;
+}
+
+@keyframes nayan {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        color: #0c0c0c;
+        background-color: #fff;
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}
+
+@keyframes nayan2 {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        color: #0c0c0c;
+        background-color: #fff;
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}
+
+/* -----------------
+++++++++++++++++++
+***************
+log in css start here
+***************
+++++++++++++++++++
+----------------- */
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-part {
+    margin: 6vh;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-part>.img-sec {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.login-part>.img-sec>img {
+    position: absolute;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.login-part>.img-sec>h1 {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    font-size: 120px;
+}
+
+.login-part-input {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-part-input>input,
+.login-part-input>a>button {
+    height: 46px;
+    border-radius: 10px;
+}
+
+.login-part-input>input {
+    border: none;
+    margin: 10px 0;
+    width: 94%;
+    outline: none;
+    padding: 0 16px;
+    background-color: #E6E6E6;
+}
+
+.login-part-input>input:focus {
+    border: 1px solid #6e6e6e;
+}
+
+.login-part-input>a>button {
+    width: 100%;
+    background-color: var(--main);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.login-part>.or {
+    width: 80%;
+    height: 14px;
+    margin: 20px 0;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+
+.login-part>.or::before {
+    content: 'OR';
+    left: 44%;
+    padding: 2px 15px;
+    position: absolute;
+    background-color: #fff;
+}
+
+.login-option {
+    display: flex;
+}
+
+.login-option>div {
+    margin: 3px 10px;
+    width: 36px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #E6E6E6;
+}
+
+.login-option>div>img {
+    width: 60%;
+    padding: 4px 10px;
+}
+
+/* -----------------
+++++++++++++++++++
+***************
+log in css end here
+***************
+++++++++++++++++++
+----------------- */
+
 
 #main {
     filter: none;
@@ -98,9 +345,11 @@ fill: cadetblue;
 .direction>p {
     font-size: 13px;
 }
-.main{
+
+.main {
     width: 100%;
 }
+
 .main>.banner {
     display: flex;
     justify-content: center;
@@ -188,14 +437,15 @@ fill: cadetblue;
     border: none;
 }
 
-.topProduct1>.card-section>.card>.img-section{
+.topProduct1>.card-section>.card>.img-section {
     padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
+
 .topProduct1>.card-section>.card>.img-section>img {
     height: 150px;
     width: 150px;
@@ -355,9 +605,11 @@ fill: cadetblue;
     justify-content: space-between;
     align-items: baseline;
 }
-.head-title>a{
+
+.head-title>a {
     text-decoration: underline;
 }
+
 .category>.head-title>p {
     font-size: 32px;
 }
@@ -381,7 +633,7 @@ fill: cadetblue;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     border-radius: 10px;
     margin: 0 8px 0 0;
     position: relative;
@@ -507,14 +759,15 @@ about css start here
 ++++++++++++++++++
 ----------------- */
 
-.timeline{
+.timeline {
     width: 100%;
     display: flex;
     color: var(--main);
     justify-content: space-evenly;
     background-color: #C1CDE2;
 }
-.timeline>.timepart{
+
+.timeline>.timepart {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -522,19 +775,22 @@ about css start here
     width: 40%;
     margin: 100px 0;
 }
-.timeline>.timepart>.detailTitle{
-    width: min(60%,300px);
+
+.timeline>.timepart>.detailTitle {
+    width: min(60%, 300px);
 }
-.timeline>.timepart>.detailTitle>h1{
+
+.timeline>.timepart>.detailTitle>h1 {
     font-size: 50px;
 }
-.timeline>.timepart>.timeInPart{
+
+.timeline>.timepart>.timeInPart {
     display: flex;
     margin: 22px 0;
     align-items: baseline;
 }
 
-.timeline>.timepart>.timeInPart>.logo-sec-time{
+.timeline>.timepart>.timeInPart>.logo-sec-time {
     width: 31px;
     height: 27.25px;
     background-color: #828FA5;
@@ -544,93 +800,681 @@ about css start here
     margin: 0 20px 0 0;
     border-radius: 50%;
 }
-.timeline>.timepart>.timeInPart>.time-deatil{
+
+.timeline>.timepart>.timeInPart>.time-deatil {
     font-size: 15px;
 }
-.timeline>.timepart>.timeInPart>.time-deatil>h1{
+
+.timeline>.timepart>.timeInPart>.time-deatil>h1 {
     font-size: 19px;
     text-transform: capitalize;
 }
-.timeline>.timepart>.timeInPart>.inactive{
+
+.timeline>.timepart>.timeInPart>.inactive {
     background-color: #ffffff;
 }
-.timeline>.timepart>.timeInPart>.inactive>img{
+
+.timeline>.timepart>.timeInPart>.inactive>img {
     opacity: 0;
 }
-.storeLocation{
+
+.storeLocation {
     width: 100%;
     overflow: hidden;
 }
-.storeLocation>.main-store{
+
+.storeLocation>.main-store {
     position: relative;
     height: 960px;
     display: flex;
     justify-content: center;
 }
-.storeLocation>.main-store>.img-shadow-box{
+
+.storeLocation>.main-store>.img-shadow-box {
     position: absolute;
     z-index: 1;
     width: 100%;
     bottom: 0;
     height: 1000px;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0.5) 57%, rgba(233,108,123,0) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.5) 57%, rgba(233, 108, 123, 0) 100%);
 }
-.storeLocation>.main-store>#mainBackStore{
+
+.storeLocation>.main-store>#mainBackStore {
     position: absolute;
     box-shadow: inset 100px 20px 30px #000;
 }
-.storeLocation>.main-store>.storeDetail{
+
+.storeLocation>.main-store>.storeDetail {
     position: absolute;
     bottom: 30px;
     text-align: center;
     z-index: 2;
 }
-.storeLocation>.main-store>.storeDetail>h1{
+
+.storeLocation>.main-store>.storeDetail>h1 {
     font-size: 76px;
 }
-.storeLocation>.main-store>.storeDetail>input{
-background-color: var(--main);
-color: #fff;
-outline: none;
-border: none;
-margin: 20px 0;
-border-radius: 6px;
-width: 250px;
-padding: 12px;
+
+.storeLocation>.main-store>.storeDetail>input {
+    background-color: var(--main);
+    color: #fff;
+    outline: none;
+    border: none;
+    margin: 20px 0;
+    border-radius: 6px;
+    width: 250px;
+    padding: 12px;
 }
-.other-location{
+
+.other-location {
     width: 95%;
     display: flex;
     justify-content: space-evenly;
     margin: auto 2.5%;
     text-transform: capitalize;
 }
-.other-location>.card{
+
+.other-location>.card {
     position: relative;
     height: 300px;
     width: 350px;
     overflow: hidden;
 }
-.other-location>.ahemedabad{
+
+.other-location>.ahemedabad {
     width: 490px;
 }
-.other-location>.card>img{
+
+.other-location>.card>img {
     width: 100%;
 }
-.other-location>.card>.box-img-back{
-position: absolute;
-bottom: 0;
+
+.other-location>.card>.box-img-back {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 200px;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0.5) 57%, rgba(233,108,123,0) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.5) 57%, rgba(233, 108, 123, 0) 100%);
 }
-.other-location>.card>.detail-location{
+
+.other-location>.card>.detail-location {
     position: absolute;
     z-index: 1;
     bottom: 0;
     padding: 15px;
 }
-.other-location>.card>.detail-location>h1{
+
+.other-location>.card>.detail-location>h1 {
     font-size: 35px;
 
+}
+
+/* -----------------
+++++++++++++++++++
+***************
+about css end here
+***************
+++++++++++++++++++
+----------------- */
+
+
+
+
+/* -----------------
+++++++++++++++++++
+***************
+cart css start here
+***************
+++++++++++++++++++
+----------------- */
+
+.cart-main-page {
+    width: min(90%, 1440px);
+    margin: 2.5vh auto;
+}
+
+.cart-main-page>.cart-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-main-page>.cart-main>.part {
+    width: 65%;
+    border-radius: 10px;
+}
+
+.cartBox {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 14px 0;
+    margin: 5px 0;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+}
+
+.cartBox>.detail {
+    font-size: 16px;
+}
+
+.cartBox>img {
+    width: 70px;
+    height: 70px;
+}
+
+.cartBox>.cartQuantity {
+    display: flex;
+    align-items: baseline;
+}
+
+.cartBox>.cartQuantity>button {
+    background-color: transparent;
+    margin: 0 12px;
+}
+
+.cartBox>button {
+    background-color: transparent;
+    text-decoration: underline;
+    color: rgb(255, 72, 72);
+    height: 100%;
+}
+
+.cart-main-page>.cart-main>.applyCode {
+    width: 28%;
+    height: 100%;
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+}
+
+.cart-main-page>.cart-main>.applyCode>.code {
+    border: 1px solid var(--main);
+    border-radius: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    border-top: 1px solid var(--main);
+}
+
+.cart-main-page>.cart-main>.applyCode>.code>input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 80%;
+    padding: 0 0 0 20px;
+}
+
+.cart-main-page>.cart-main>.applyCode>.code>button {
+    background-color: var(--main);
+    color: #fff;
+    border-radius: 40px;
+    padding: 9px 20px;
+    margin: 0 7px 0 0;
+}
+
+.cart-main-page>.cart-main>.applyCode>.line-br {
+    border-bottom: 1px solid #000;
+    margin: 8px 0;
+}
+
+.cart-main-page>.cart-main>.applyCode>.detailCode>.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-main-page>.cart-main>.applyCode>.detailCode>.line>h4 {
+    color: #6d6d6d;
+    font-weight: 400;
+}
+#goPaymentPAge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    margin: 14px 0 0 0 ;
+    height: 40px;
+    background-color: var(--main);
+    color: #fff;
+}
+
+/* -----------------
+++++++++++++++++++
+***************
+cart css end here
+***************
+++++++++++++++++++
+----------------- */
+
+
+
+
+
+/* -----------------
+++++++++++++++++++
+***************
+help css start here
+***************
+++++++++++++++++++
+----------------- */
+.upper-help-part-title{
+    text-align: center;
+    padding: 150px 0 50px 0;
+    background-color: #dddddd;
+}
+.upper-help-part-title>h1{
+    font-size: 65px;
+}
+.upper-part-help-detail{
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.upper-part-help-detail>.part{
+    display: flex;
+}
+.upper-part-help-detail>.part>.icon-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upper-part-help-detail>.part>.icon-part>img{
+    width: 25px;
+    height: 25px;
+}
+.upper-part-help-detail>.part>.detail-part{
+    margin-left: 16px;
+}
+.headquaterBg{
+    position: relative;
+    width: 100%;
+    height: 528px;
+}
+.headquaterBg>img{
+    width: 100%;
+}
+.headquaterBg>.head-detail{
+    width: 300px;
+    position: absolute;
+    text-transform: capitalize;
+    top: 250px;
+    left: 60px;
+}
+.headquaterBg>.head-detail>h1{
+    font-size: 43px;
+}
+.form-help{
+    text-transform: capitalize;
+    background-color: #dddddd;
+}
+.form-help>p{
+    text-align: center;
+    padding: 80px 0 17px 0;
+}
+.form-help>h1{
+    text-align: center;
+    font-size: 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+.form-help>.form-in{
+    width: 700px;
+    margin: 30px auto;
+}
+.form-help>.form-in>label{
+    font-size: 13px;
+    width: 100%;
+}
+.form-help>.form-in>input{
+    outline: none;
+    border: none;
+    height: 60px;
+    width: 100%;
+    background-color: #fff;
+}
+.form-help>.form-in>textarea{
+    max-width: 100%;
+    width: 100%;
+}
+#form-btn{
+    height: 60px;
+    margin: 20px 0 60px 0;
+    background-color: var(--main);
+    color: #fff;
+    width: 100%;
+}
+.touchSection{
+    width: 100%;
+    padding: 130px 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.touchSection>p{
+    font-size: 48px;
+    width: 50%;
+    text-transform: capitalize;
+    padding: 30px;
+}
+.touchSection>div{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.touchSection>div>input{
+    font-size: 20px;
+    width: 68%;
+    border: 1px solid var(--main);
+    height: 60px;
+    padding:  0 20px;
+}
+.touchSection>div>button{
+    font-size: 20px;
+    width: 28%;
+    background-color: var(--main);
+    color: #fff;
+}
+
+
+
+/* -----------------
+++++++++++++++++++
+***************
+help css end here
+***************
+++++++++++++++++++
+----------------- */
+
+
+
+
+
+
+/* -----------------
+++++++++++++++++++
+***************
+404 css start here
+***************
+++++++++++++++++++
+----------------- */
+
+
+.error-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0;
+}
+.error-page>img{
+    width: 300px;
+    height: 300px;
+}
+.error-page>h3{
+font-size: 64px;
+padding: 20px 0;
+}
+.error-page>a{
+    margin: 19px 0;
+    padding: 20px 100px;
+    background-color: var(--main);
+    color: #fff;
+}
+
+
+
+/* -----------------
+++++++++++++++++++
+***************
+404 css end here
+***************
+++++++++++++++++++
+----------------- */
+
+
+/* -----------------
+++++++++++++++++++
+***************
+product css start here
+***************
+++++++++++++++++++
+----------------- */
+
+.payment-page-main {
+    width: min(90%, 1440px);
+    margin: 2.5vh auto;
+}
+
+.payment-page-main>.direction {
+    margin: 20px 0;
+}
+
+.payment-page-main>.personDetail {
+    border-radius: 10px;
+    border: 1px solid var(--main);
+}
+
+.payment-page-main>.personDetail>.part {
+    display: flex;
+    width: 90%;
+    margin: 0px auto;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.payment-page-main>.personDetail>.part>div {
+    font-size: 14px;
+    display: flex;
+}
+
+.payment-page-main>.personDetail>.part:last-child {
+    border: none;
+}
+
+.payment-page-main>.personDetail>.part>div>input {
+    margin-left: 15px;
+    outline: none;
+    border: none;
+    width: 600px;
+    font-size: 14px;
+}
+
+.payment-page-main>.personDetail>.part>button {
+    background-color: transparent;
+    text-decoration: underline;
+    color: var(--main2);
+}
+
+#titlePayment {
+    padding: 10px 0;
+}
+
+.partpayment {
+    padding: 7px 0;
+}
+
+.partpayment>input {
+    height: 40px;
+    width: 500px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #EFEFEF;
+}
+
+/* Body */
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0px;
+}
+
+hr {
+    height: 1px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.container>.card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+/* .title {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 1px solid #ffffff;
+    font-weight: 700;
+    font-size: 11px;
+    color: #000000;
+} */
+
+/* Cart */
+.cart {
+    border-radius: 19px 19px 0px 0px;
+}
+
+.cart .steps {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.cart .steps .step {
+    display: grid;
+    gap: 10px;
+}
+
+.cart .steps .step span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.cart .steps .step p {
+    font-size: 11px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* Promo */
+.promo form {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    gap: 10px;
+    padding: 0px;
+}
+
+.input_field {
+    width: auto;
+    height: 36px;
+    padding: 0 0 0 12px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ffffff;
+    background-color: #d1d1d1;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #d6d6d6;
+    background-color: #ffffff;
+}
+
+.promo form button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    gap: 10px;
+    width: 100%;
+    height: 36px;
+    
+    background: #202020;
+    box-shadow: 0px 0.5px 0.5px #ffffff, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+    border-radius: 5px;
+    border: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+}
+
+/* Checkout */
+.payments .details {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    padding: 0px;
+    gap: 5px;
+}
+
+.payments .details span:nth-child(odd) {
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    margin: auto auto auto 0;
+}
+
+.payments .details span:nth-child(even) {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    margin: auto 0 auto auto;
+}
+
+.checkout .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 20px;
+    background-color: #ffffff;
+}
+
+.price {
+    position: relative;
+    font-size: 22px;
+    color: #2B2B2F;
+    font-weight: 900;
+}
+
+.checkout .checkout-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 36px;
+    background: #ffffff;
+    box-shadow: 0px 0.5px 0.5px #ffffff, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+    border-radius: 7px;
+    border: 1px solid #ffffff;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+#finalbtn{
+    width: 100%;
+    font-size: 16px;
+    padding: 6px 0;
+    height: 40px;
+    background-color: var(--main);
+    color: #fff;
 }

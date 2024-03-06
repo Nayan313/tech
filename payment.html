@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tech payment</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+
+  <div class="payment-loader" id="payment-loader">
+    <div class="loading">
+      <svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124">
+        <circle class="circle-loading" cx="62" cy="62" r="59" fill="none" stroke="hsl(0, 0%, 100%)" stroke-width="6px">
+        </circle>
+        <circle class="circle" cx="62" cy="62" r="59" fill="none" stroke="hsl(210, 31%, 80%)" stroke-width="6px"
+          stroke-linecap="round"></circle>
+        <polyline class="check" points="73.56 48.63 57.88 72.69 49.38 62" fill="none" stroke="hsl(210, 31%, 80%)"
+          stroke-width="6px" stroke-linecap="round"></polyline>
+      </svg>
+    </div>
+    <p id="last-great-message">your payment is done</p>
+    <p id="last2-great-message">thank You from Team tech. 😊</p>
+  </div>
+  <div class="payment-page-main">
+    <h1>tech.</h1>
+    <div class="direction">
+      <p><a href="index.html">Home</a></p>
+      <p><a href="shop.html"> > shop ></a></p>
+      <p><a href="cart.html">cart ></a></p>
+      <p><a href="#">Payment</a></p>
+    </div>
+    <div class="personDetail">
+      <div class="part">
+        <div>
+          <p>Contact</p>
+          <input type="email" name="" value="abc@gmail" id="">
+        </div>
+        <button onclick="laststep()">Change</button>
+      </div>
+      <div class="part">
+        <div>
+          <p>Address</p>
+          <input type="email" name="" value=" Apt. 412 903 Christiansen Shoals, Lake Leifport, NV 21735-0004" id="">
+        </div>
+        <button>Change</button>
+      </div>
+    </div>
+    <p id="titlePayment">Payment</p>
+    <!-- <div class="bottom-payment-box">
+      <div class="partpayment">
+        <h6>card name</h6>
+        <input type="text" name="" id="">
+      </div>
+      <div class="partpayment">
+        <h6>card number</h6>
+        <input type="text" name="" id="">
+      </div>
+      <div class="partpayment">
+        <h6>exspiry</h6>
+        <input type="text" name="" id="">
+      </div>
+      <div class="partpayment">
+        <h6>cvv</h6>
+        <input type="text" name="" id="">
+      </div>
+    </div> -->
+
+    <div class="container">
+      <div class="card cart">
+        <div class="steps">
+          <div class="step">
+            <hr>
+            <div>
+              <span>PAYMENT METHOD</span>
+              <p>Visa</p>
+              <p>**** **** **** 4243</p>
+            </div>
+            <hr>
+            <div class="promo">
+              <span>HAVE A PROMO CODE?</span>
+              <form class="form">
+                <input class="input_field" placeholder="Enter a Promo Code" type="text">
+                <button>Apply</button>
+              </form>
+            </div>
+            <hr>
+            <div class="payments">
+              <span>PAYMENT</span>
+              <div class="details">
+                <span>Subtotal:</span>
+                <span>$240.00</span>
+                <span>Shipping:</span>
+                <span>$10.00</span>
+                <span>Tax:</span>
+                <span>$30.40</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card checkout">
+        <div class="footer">
+          <label class="price">₹22280.40</label>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+        <button id="finalbtn" onclick="laststep()">Buy now</button> 
+      </div>
+    </div>
+  </div>
+  <script>
+    function laststep() {
+      let paymentLoader = document.getElementById("payment-loader");
+      paymentLoader.style.display = "flex";
+      setTimeout(function () {
+        paymentLoader.style.display = "none";
+      }, 8000);
+    }
+  </script>
+</body>
+
+</html>
