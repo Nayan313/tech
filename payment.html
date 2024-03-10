@@ -118,7 +118,19 @@
       paymentLoader.style.display = "flex";
       setTimeout(function () {
         paymentLoader.style.display = "none";
+        Notification.requestPermission().then(perm => {
+          if (perm === "granted"){
+            new Notification("Thx for shop with us 😊",{
+            body: "your order on the way 🚚",
+          icon:"./photo/notilogo.png"
+         })
+          }
+          else{
+            alert("Notification Permission is denined");
+          }
+        })
       }, 8000);
+
     }
   </script>
 </body>

@@ -22,11 +22,15 @@
             </div>
 
             <div class="categoryShop">
+                <div class="categoryBox active" id="All" title="All">
+                    <img src="svg/shop/ALL.png" alt="">
+                    <p>All</p>
+                </div>
                 <div class="categoryBox" id="mobile" title="Mobile">
                     <img src="svg/shop/mobile.svg" alt="">
                     <p>Mobile</p>
                 </div>
-                <div class="categoryBox active" id="accessories" title="Accessories">
+                <div class="categoryBox" id="accessories" title="Accessories">
                     <img src="svg/shop/accessories.svg" alt="">
                     <p>Accessories</p>
                 </div>
@@ -67,21 +71,22 @@
                 <div class="filter">
                     <h3>filter <img src="svg/filter.svg" alt=""></h3>
                     <div class="inner-filter">
-                        <h1>Brand</h1>
-                        <p><input type="checkbox" name="brand" id="">samsung</p>
-                        <p><input type="checkbox" name="brand" id="">apple</p>
-                        <p><input type="checkbox" name="brand" id="">oneplus</p>
-                        <p><input type="checkbox" name="brand" id="">nothing</p>
-                        <p><input type="checkbox" name="brand" id="">vivo</p>
-                        <p><input type="checkbox" name="brand" id="">mi</p>
-                        <p><input type="checkbox" name="brand" id="">oppo</p>
-                        <p><input type="checkbox" name="brand" id="">redmi</p>
-                        <p><input type="checkbox" name="brand" id="">iqoo</p>
-                        <p><input type="checkbox" name="brand" id="">lava</p>
+                        <h1 id="demo1234upchange">Brand</h1>
+                        <p><input type="checkbox" name="brand" value="all" checked id="" onclick="chedboxfn()">all</p>
+                        <p><input type="checkbox" name="brand" value="samsung" id="" onclick="chedboxfn()">samsung</p>
+                        <p><input type="checkbox" name="brand" value="apple" id="" onclick="chedboxfn()">apple</p>
+                        <p><input type="checkbox" name="brand" value="oneplus" id="" onclick="chedboxfn()">oneplus</p>
+                        <p><input type="checkbox" name="brand" value="msi" id="" onclick="chedboxfn()">msi</p>
+                        <p><input type="checkbox" name="brand" value="dell" id="" onclick="chedboxfn()">Dell</p>
+                        <p><input type="checkbox" name="brand" value="vivo" id="" onclick="chedboxfn()">vivo</p>
+                        <p><input type="checkbox" name="brand" value="oppo" id="" onclick="chedboxfn()">oppo</p>
+                        <p><input type="checkbox" name="brand" value="redmi" id="" onclick="chedboxfn()">redmi</p>
+                        <p><input type="checkbox" name="brand" value="iqoo" id="" onclick="chedboxfn()">iqoo</p>
+                        <p><input type="checkbox" name="brand" value="lava" id="" onclick="chedboxfn()">lava</p>
                     </div>
                     <div class="inner-filter">
                         <h1>price</h1>
-                        <p><input type="checkbox" name="price" id="">₹4000 - ₹9999</p>
+                        <p><input type="checkbox" name="price" value="mobile" id="">₹4000 - ₹9999</p>
                         <p><input type="checkbox" name="price" id="">₹9999 - ₹19999</p>
                         <p><input type="checkbox" name="price" id="">₹19999 - ₹29999</p>
                         <p><input type="checkbox" name="price" id="">₹29999 - ₹49999</p>
@@ -128,7 +133,7 @@
                         </div>
                     </div>
                     <div class="shop-card-section">
-                        <div class="shop-card" title="galaxy s24 ultra" id="₹1,39,999">
+                        <div class="shop-card" title="galaxy s24 ultra" id="galaxy s24 ultra">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/s24ultra.png" alt="">
                             </div>
@@ -136,7 +141,7 @@
                             <p>₹1,39,999</p>
                         </div>
                     
-                        <div class="shop-card" title="iphone 15 pro max" id="₹1,59,999">
+                        <div class="shop-card" title="iphone 15 pro max" id="iphone 15 pro max">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/15pro.png" alt="">
                             </div>
@@ -144,7 +149,7 @@
                             <p>₹1,59,999</p>
                         </div>
                     
-                        <div class="shop-card" title="galaxy s24 plus" id="₹1,00,999">
+                        <div class="shop-card" title="galaxy s24 plus" id="galaxy s24 plus">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/24plus.png" alt="">
                             </div>
@@ -152,7 +157,7 @@
                             <p>₹1,00,999</p>
                         </div>
                     
-                        <div class="shop-card" title="galaxy fold 5" id="₹1,69,999">
+                        <div class="shop-card" title="galaxy fold 5" id="galaxy fold 5">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/fold 5.png" alt="">
                             </div>
@@ -160,7 +165,7 @@
                             <p>₹1,69,999</p>
                         </div>
                     
-                        <div class="shop-card" title="galaxy flip 5" id="₹1,00,999">
+                        <div class="shop-card" title="galaxy flip 5" id="galaxy flip 5">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/flip 5.png" alt="">
                             </div>
@@ -168,15 +173,7 @@
                             <p>₹1,00,999</p>
                         </div>
                     
-                        <div class="shop-card" title="galaxy s24" id="₹89,999">
-                            <div class="shop-img-sec">
-                                <img src="photo/mobile/s24.png" alt="">
-                            </div>
-                            <h1>galaxy s24</h1>
-                            <p>₹89,999</p>
-                        </div>
-                    
-                        <div class="shop-card" title="pixel 8 pro" id="₹85,999">
+                        <div class="shop-card" title="pixel 8 pro" id="pixel 8 pro">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/8pro.png" alt="">
                             </div>
@@ -184,7 +181,7 @@
                             <p>₹85,999</p>
                         </div>
                     
-                        <div class="shop-card" title="iphone 15" id="₹79,999">
+                        <div class="shop-card" title="iphone 15" id="iphone 15">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/15.png" alt="">
                             </div>
@@ -192,7 +189,7 @@
                             <p>₹79,999</p>
                         </div>
                     
-                        <div class="shop-card" title="samsung A73" id="₹39,999">
+                        <div class="shop-card" title="samsung A73" id="samsung A73">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/a73.png" alt="">
                             </div>
@@ -200,7 +197,7 @@
                             <p>₹39,999</p>
                         </div>
                     
-                        <div class="shop-card" title="iphone 12" id="₹49,999">
+                        <div class="shop-card" title="iphone 12" id="iphone 12">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/iphone 12.png" alt="">
                             </div>
@@ -208,7 +205,7 @@
                             <p>₹49,999</p>
                         </div>
                     
-                        <div class="shop-card" title="one plus 12 pro" id="₹79,999">
+                        <div class="shop-card" title="one plus 12 pro" id="one plus 12 pro">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/one plus 12.png" alt="">
                             </div>
@@ -216,7 +213,7 @@
                             <p>₹79,999</p>
                         </div>
                     
-                        <div class="shop-card" title="samsung s24" id="₹89,999">
+                        <div class="shop-card" title="samsung s24" id="samsung s24">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/s24 (2).png" alt="">
                             </div>
@@ -224,20 +221,12 @@
                             <p>₹89,999</p>
                         </div>
                     
-                        <div class="shop-card" title="vivo 100x" id="₹59,999">
+                        <div class="shop-card" title="vivo 100x" id="vivo 100x">
                             <div class="shop-img-sec">
                                 <img src="photo/mobile/vivo 100x.png" alt="">
                             </div>
                             <h1>vivo 100x</h1>
                             <p>₹59,999</p>
-                        </div>
-                    
-                        <div class="shop-card" title="iphone 15" id="₹79,999">
-                            <div class="shop-img-sec">
-                                <img src="photo/mobile/15.png" alt="">
-                            </div>
-                            <h1>iphone 15</h1>
-                            <p>₹79,999</p>
                         </div>
                     </div>
                 </div>
@@ -246,10 +235,15 @@
         <footer class="footer">
 
         </footer>
+        <button onclick="getValue()">vlsd</button>
+        <div id="jsonDemo">
+
+        </div>
     </section>
     <script src="js/navScript.js"></script>
     <script src="js/shopscript.js"></script>
     <script src="js/product.js"></script>
+    <!-- <script src="js/productdata.js"></script> -->
     <script src="js/script.js"></script>
 </body>
 

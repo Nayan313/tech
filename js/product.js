@@ -1,82 +1,87 @@
-const getPage = (b) => {
-    console.log("hello from product script"+b);
+let newStarting = new URLSearchParams(window.location.search).get("id");
+console.log(newStarting);
 
+fetch("json/product.json")
+  .then((SingleProductDetail) => SingleProductDetail.json())
+  .then((ProductDetail) => {
+    let thisProduct = ProductDetail.filter((value) => {
+      return value.productId == newStarting;
+    })[0];
+    document.title = thisProduct.name;
+    document.getElementById("SingleDirectoinName").innerHTML = thisProduct.name;
+    document.getElementById("SingleProductPageCatagory").innerHTML =
+      thisProduct.catagory;
+    document.getElementById("SingleProductPageBrand").innerHTML =
+      thisProduct.brand;
+    document.getElementById("SingleProductPageName").innerHTML =
+      thisProduct.name;
+    document.querySelector(".inproductBrandOS").innerHTML =
+      thisProduct.OperatingSystem;
+    document.querySelector(".inproductname").innerHTML = thisProduct.name;
+    document.querySelector(".inproductBrandbrand").innerHTML =
+      thisProduct.brand;
+    document.getElementById("SingleProductPagePrice").innerHTML =
+      "₹" + thisProduct.price;
 
-    const productData = [
-        {
-          productId: "mss24u",
-          name: "galaxy s24 ultra",
-          price: "₹111111,39,999",
-          img: "photo/mobile/s24ultra.png",
-        },
-        {
-          productId: "mi15p",
-          name: "iphone 15 pro max",
-          price: "₹1,59,999",
-          img: "photo/mobile/15pro.png",
-        },
-        {
-          productId: "mss24p",
-          name: "galaxy s24 plus",
-          price: "₹1,00,999",
-          img: "photo/mobile/24plus.png",
-        },
-        {
-          productId: "msfo5",
-          name: "galaxy fold 5",
-          price: "₹1,69,999",
-          img: "photo/mobile/fold 5.png",
-        },
-        {
-          productId: "msfi5",
-          name: "galaxy flip 5",
-          price: "₹1,00,999",
-          img: "photo/mobile/flip 5.png",
-        },
-        {
-          productId: "mgp8p",
-          name: "pixel 8 pro",
-          price: "₹85,999",
-          img: "photo/mobile/8pro.png",
-        },
-        {
-          productId: "mi15",
-          name: "iphone 15",
-          price: "₹79,999",
-          img: "photo/mobile/15.png",
-        },
-        {
-          productId: "ms73",
-          name: "samsung A73",
-          price: "₹39,999",
-          img: "photo/mobile/a73.png",
-        },
-        {
-          productId: "mi12",
-          name: "iphone 12",
-          price: "₹49,999",
-          img: "photo/mobile/iphone 12.png",
-        },
-        {
-          productId: "mop12p",
-          name: "one plus 12 pro",
-          price: "₹79,999",
-          img: "photo/mobile/one plus 12.png",
-        },
-        {
-          productId: "mss24",
-          name: "samsung s24",
-          price: "₹89,999",
-          img: "photo/mobile/s24 (2).png",
-        },
-        {
-          productId: "mv100x",
-          name: "vivo 100x",
-          price: "₹59,999",
-          img: "photo/mobile/vivo 100x.png",
-        },
-      ];
-      
-    
+    document.getElementById("SingleProductMainImg").innerHTML = `
+   <img src="${thisProduct.ProductImgMain}" id="productimagebox" alt="">`;
 
+    document.querySelector(".description-section").innerHTML =
+      thisProduct.description;
+
+    document.getElementById("ProductImgMain").innerHTML = `
+    <img src="${thisProduct.ProductImgMain}" alt="" class="small-img"
+   onclick="productImgClick(this)"></div>`;
+    document.getElementById("ProductImgSide").innerHTML = `
+    <img src="${thisProduct.ProductImgSide}" alt="" class="small-img"
+   onclick="productImgClick(this)"></div>`;
+    document.getElementById("ProductImgMobbiles").innerHTML = `
+    <img src="${thisProduct.ProductImgMobbiles}" alt="" class="small-img"
+   onclick="productImgClick(this)"></div>`;
+    document.getElementById("ProductImgSpecification").innerHTML = `
+    <img src="${thisProduct.ProductImgSpecification}" alt="" class="small-img"
+   onclick="productImgClick(this)"></div>`;
+    document.getElementById("ProductImgBox").innerHTML = `
+    <img src="${thisProduct.ProductImgBox}" alt="" class="small-img"
+   onclick="productImgClick(this)"></div>`;
+
+    document.getElementById("fullImg1").innerHTML = `<img src="${thisProduct.full1}" alt="" class="full-scale-img">`;
+    document.getElementById("fullImg2").innerHTML = `<img src="${thisProduct.full2}" alt="" class="full-scale-img">`;
+    document.getElementById("fullImg3").innerHTML = `<img src="${thisProduct.full3}" alt="" class="full-scale-img">`;
+
+    console.log("₹" + thisProduct.full3);
+    console.table(thisProduct);
+  });
+
+let quantity = 1;
+let quantityOp = document.getElementById("productQuantityOutput");
+function removeProduct() {
+  quantity--;
+  if (quantity <= 0) {
+    quantity++;
+    document.getElementById("quantityMessage").style.display = "block";
+    setTimeout(function () {
+      document.getElementById("quantityMessage").style.display = "none";
+    }, 2000);
+  }
+  quantityOp.innerHTML = quantity;
 }
+function addProduct() {
+  quantity++;
+  quantityOp.innerHTML = quantity;
+}
+
+quantity1 = quantity;
+
+function productImgClick(smallimg) {
+  var fullimg = document.getElementById("productimagebox");
+  fullimg.src = smallimg.src;
+}
+
+const elements = document.querySelectorAll(".card__skeleton");
+
+setTimeout(function () {
+  elements.forEach((element) => {
+    element.classList.remove("card__skeleton");
+  });
+}, 500);
